@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+.scroll-content {
+  background: url(../img/famo.jpg);
+  /* background: rgba(0, 0, 0, 0.10); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
