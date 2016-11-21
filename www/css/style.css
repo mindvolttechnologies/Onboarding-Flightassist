@@ -12,6 +12,45 @@
   margin-top: -15px;
   font-weight: 600;
 }
+#Inner{
+  background: rgba(0,0,0,0.80);
+  padding: 30px;
+  color: #eeeeee;
+  margin-top: -15px;
+  font-weight: 600;
+  height:100%;
+}
+#Inner1{
+  background: rgba(0,0,0,0.80);
+  padding: 30px;
+  color: #eeeeee;
+  margin-top: -15px;
+  font-weight: 600;
+}
+#Inner2{
+  background: rgba(0,0,0,0.80);
+  padding: 30px;
+  color: #eeeeee;
+  margin-top: -15px;
+  font-weight: 600;
+}
+input[type="text"]{
+  color: #eeeeee;
+}
 #T{
   color:whitesmoke;
 }
+#bg{
+  background: rgba(0,0,0,0.60);
+  padding-top: 30px;
+  color: #eeeeee;
+  margin-top: -15px;
+  font-weight: 600;
+  height:100%;
+}
+#form{
+  background-color: #007aff;
+}
+/* transfered css*/
+
+

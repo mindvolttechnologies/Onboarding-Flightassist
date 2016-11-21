@@ -49,6 +49,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+    .state('tab.stepone', {
+      url: '/step-one',
+      views: {
+        'tab-step1': {
+          templateUrl: 'templates/tab-step1.html',
+          controller: 'StepCtrl'
+        }
+      }
+    })
+    .state('tab.steptwo', {
+      url: '/step-two',
+      views: {
+        'tab-step2': {
+          templateUrl: 'templates/tab-step2.html',
+          controller: 'StepCtrl'
+        }
+      }
+    })
 
   .state('tab.chats', {
       url: '/chats',
@@ -59,6 +77,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
@@ -83,3 +102,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+

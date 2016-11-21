@@ -5,24 +5,65 @@
       <div class="col col-25"></div>
       <div class="col col-50" id="home">
 
-
-        <button class="button button-positive">
+        <script id="my-modal.html" type="text/ng-template">
+          <ion-modal-view>
+            <ion-header-bar>
+              <h1 class="title"></h1>
+            </ion-header-bar>
+            <ion-content>
+              Hello!
+            </ion-content>
+          </ion-modal-view>
+        </script>
+        <button class="button button-positive" ng-click="modal.show()">
           SIGN-IN
         </button>
-        <h4 id="T">Welcome to Flight Assist</h4>
+<!--The Start of Hidden Login Modal -->
+        <script id="templates/modal.html" type="text/ng-template">
+          <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+              <h1 class="title">Aviators rock!, Sign in</h1>
+              <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+            </ion-header-bar>
+            <ion-content class="padding" id="form">
+
+              <div class="list" id="Inner">
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">First Name</span>
+                  <input type="text" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Last Name</span>
+                  <input type="text" placeholder="Last Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Email</span>
+                  <input type="text" placeholder="Email">
+                </label>
+              </div>
+                <button class="button button-full button-positive" ng-click="createContact(newUser)">Sign In</button>
+
+            </ion-content>
+          </ion-modal-view>
+        </script>
+
+        <!--The Login Modal  End -->
+
+        <h4 id="T">Welcome to Flight Assist - Onboarding</h4>
         <br>
         <p>
           Not a Proactive flight training member? tap below to start your aviation journey.
         </p>
 
+        <a class="button icon icon-right button-block button-positive ion-chevron-right" href="#/tab/step-one">START YOUR AVIATION JOURNEY</a>
 
-        <button class="button button-block button-positive">
-          START YOUR AVIATION JOURNEY
-        </button>
 
       </div>
       <div class="col col-25"></div>
     </div>
+
+
+
 
   </ion-content>
 </ion-view>
