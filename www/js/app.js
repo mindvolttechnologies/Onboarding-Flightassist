@@ -5,7 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic',
+        'starter.Authenticate',
+        'starter.configService',
+        'ngCookies',
+        'ngCordova'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -45,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        controller: 'LoginCtrl'
       }
     }
   })
@@ -63,7 +68,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-step2': {
           templateUrl: 'templates/tab-step2.html',
-          controller: 'StepCtrl'
+          controller: 'OnboardCtrl'
+        }
+      }
+    })
+    .state('tab.stepthree', {
+      url: '/step-three',
+      views: {
+        'tab-step3': {
+          templateUrl: 'templates/tab-step3.html',
+          controller: 'OnboardCtrl'
+        }
+      }
+    })
+    .state('tab.stepfour', {
+      url: '/step-four',
+      views: {
+        'tab-step4': {
+          templateUrl: 'templates/tab-step3.html',
+          controller: 'OnboardCtrl'
+        }
+      }
+    })
+    .state('tab.stepfive', {
+      url: '/step-five',
+      views: {
+        'tab-step5': {
+          templateUrl: 'templates/tab-step3.html',
+          controller: 'OnboardCtrl'
         }
       }
     })

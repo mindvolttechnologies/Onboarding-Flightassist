@@ -18,7 +18,7 @@
         <button class="button button-positive" ng-click="modal.show()">
           SIGN-IN
         </button>
-<!--The Start of Hidden Login Modal -->
+      <!--The Start of Hidden Login Modal -->
         <script id="templates/modal.html" type="text/ng-template">
           <ion-modal-view>
             <ion-header-bar class="bar bar-header bar-positive">
@@ -27,21 +27,18 @@
             </ion-header-bar>
             <ion-content class="padding" id="form">
 
-              <div class="list" id="Inner">
-                <label class="item item-input item-floating-label">
-                  <span class="input-label">First Name</span>
-                  <input type="text" placeholder="First Name">
-                </label>
-                <label class="item item-input item-floating-label">
-                  <span class="input-label">Last Name</span>
-                  <input type="text" placeholder="Last Name">
-                </label>
+              <div  id="Inner">
+
                 <label class="item item-input item-floating-label">
                   <span class="input-label">Email</span>
-                  <input type="text" placeholder="Email">
+                  <input type="email" ng-model="User.email" placeholder="Please enter your Email Address">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Password</span>
+                  <input type="password" ng-model="User.password" placeholder="Please enter your password">
                 </label>
               </div>
-                <button class="button button-full button-positive" ng-click="createContact(newUser)">Sign In</button>
+              <button class="button button-full button-positive" ng-click="AuthenticateUser(User)">Sign In</button>
 
             </ion-content>
           </ion-modal-view>
